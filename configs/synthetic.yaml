@@ -1,0 +1,20 @@
+seed: 7
+sequence_length: 64
+batch_size: 128
+train_steps: 5000
+learning_rate: 0.0003
+weight_decay: 0.0001
+model:
+  state_dim: 4
+  action_dim: 1
+  d_model: 128
+  n_heads: 4
+  n_layers: 4
+  dropout: 0.1
+synthetic:
+  dt: 0.05
+  train_steering_gain: [0.6, 1.4]
+  train_action_noise_std: [0.0, 0.08]
+  test_latency_steps: [2, 3, 4]
+  horizon: 200
+checkpoint_dir: checkpoints
